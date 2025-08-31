@@ -41,7 +41,7 @@ const Footer = () => {
   return (
     <>
       {/* Footer */}
-      <footer className="bg-primary relative">
+      <footer className="bg-primary relative overflow-hidden">
         <div className="max-w-section mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-center w-full">
           <div className="md:col-span-2 bg-primary py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between items-start w-full mt-12">
@@ -75,7 +75,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="md:col-span-1 grid justify-center items-center bg-background">
+          <div className="md:col-span-1 grid justify-center items-center bg-background relative">
+            <div className="absolute left-[100%] bottom-0 top-0 w-[50vh] bg-background"></div>
             <div className="md:text-right flex flex-col gap-4 items-center my-12">
               <Image src="/image/logo.png" alt="Logo" width={150} height={40} />
               <div className="text-center">
