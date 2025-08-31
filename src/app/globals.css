@@ -1,96 +1,105 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
-    --background: #0a0a0a;
-    --foreground: #ffffff;
-    --primary: #015F4D;
-    --primary-dark: #015F4D80;
-    --secondary: #87B023;
-    --accent: #4ade80;
-    --muted: #1a1a1a;
-    --muted-foreground: #a3a3a3;
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #015f4d;
+  --primary-dark: #015f4d80;
+  --secondary: #87b023;
+  --accent: #4ade80;
+  --muted: #1a1a1a;
+  --muted-foreground: #a3a3a3;
 }
 
-
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-primary: var(--primary);
-    --color-primary-dark: var(--primary-dark);
-    --color-secondary: var(--secondary);
-    --color-accent: var(--accent);
-    --color-muted: var(--muted);
-    --color-muted-foreground: var(--muted-foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 /* Food theme gradients */
 .gradient-food {
-    background: linear-gradient(135deg, var(--food-green) 0%, var(--food-dark-green) 100%);
+  background: linear-gradient(135deg, var(--food-green) 0%, var(--food-dark-green) 100%);
 }
 
 .gradient-food-light {
-    background: linear-gradient(135deg, var(--food-light-green) 0%, var(--food-green) 100%);
+  background: linear-gradient(135deg, var(--food-light-green) 0%, var(--food-green) 100%);
+}
+
+@layer components {
+  .font-manrope {
+    font-family: "Manrope", sans-serif;
+  }
+  .max-w-section {
+    @apply max-w-7xl;
+  }
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+  background: var(--background);
+  color: var(--foreground);
+  /* font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; */
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
 
 /* Custom animations */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pulse {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
 .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 /* Gradient backgrounds */
 .gradient-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
 .gradient-accent {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
 }
 .gradient-secondary {
     background: linear-gradient(180deg, #000000 0%, rgba(1, 95, 77, 0.5) 50%, rgba(1, 95, 77, 0.5) 65%, #000000 100%);
@@ -99,12 +108,12 @@ body {
 
 /* Glass morphism effect */
 .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 @media (prefers-color-scheme: dark) {
-    .glass {
-        background: rgba(0, 0, 0, 0.2);
-    }
+  .glass {
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
