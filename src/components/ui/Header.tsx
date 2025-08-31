@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BsGrid, BsGridFill } from "react-icons/bs";
 
@@ -13,26 +14,26 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
       <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <Link className="flex-shrink-0" href="/">
               <Image src="/image/logo.png" alt="Logo" width={100} height={40} />
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#home" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
+              <Link href="/" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
                 HOME
-              </a>
-              <a href="#about" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link href="#about" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
                 ABOUT US
-              </a>
-              <a href="#products" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link href="products" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
                 PRODUCTS
-              </a>
-              <a href="#contact" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
+              </Link>
+              <Link href="#contact" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
                 CONTACT US
-              </a>
+              </Link>
             </div>
           </div>
 
