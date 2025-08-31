@@ -2,6 +2,7 @@
 
 import Footer from "@/components/ui/Footer";
 import Header from "@/components/ui/Header";
+import HeroSection from "@/components/ui/HeroSection";
 import { useState } from "react";
 
 export default function Home() {
@@ -11,6 +12,10 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+
+      {/* Hero Section */}
+      <HeroSection />
+
       <div className="h-screen"></div>
 
       <Footer />

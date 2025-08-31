@@ -41,8 +41,8 @@ const Footer = () => {
   return (
     <>
       {/* Footer */}
-      <footer className="pt-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-center w-full">
+      <footer className="bg-primary relative">
+        <div className="max-w-section mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-center w-full">
           <div className="md:col-span-2 bg-primary py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between items-start w-full mt-12">
               <div className="w-full px-10">
@@ -74,7 +74,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-1 grid justify-center items-center">
+
+          <div className="md:col-span-1 grid justify-center items-center bg-background">
             <div className="md:text-right flex flex-col gap-4 items-center my-12">
               <Image src="/image/logo.png" alt="Logo" width={150} height={40} />
               <div className="text-center">
