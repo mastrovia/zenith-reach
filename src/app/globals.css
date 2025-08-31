@@ -92,6 +92,10 @@ body {
 .gradient-accent {
     background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
 }
+.gradient-secondary {
+    background: linear-gradient(180deg, #000000 0%, rgba(1, 95, 77, 0.5) 50%, rgba(1, 95, 77, 0.5) 65%, #000000 100%);
+}
+
 
 /* Glass morphism effect */
 .glass {
