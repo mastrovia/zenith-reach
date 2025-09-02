@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
 
 export default function AboutSection() {
@@ -12,17 +11,17 @@ export default function AboutSection() {
             <h2 className="rotate-[-90deg] text-primary/50 text-8xl">ABOUT US</h2>
           </div>
           <h3 className="text-secondary text-3xl md:text-4xl font-semibold leading-tight relative">
-            Bringing India's <br />
+            Bringing India&apos;s <br />
             Tradition to the World
           </h3>
           <p className="mt-6 leading-8 relative text-lg">
             At <span className="font-bold text-xl">Zenith Reach</span>, we believe food is more than just
-            nourishment — it’s a connection to tradition, culture, and authentic taste. With a vision to bring
-            the rich flavors of India to the world, we specialize in
+            nourishment — it&apos;s a connection to tradition, culture, and authentic taste. With a vision to
+            bring the rich flavors of India to the world, we specialize in
             <span className="font-bold text-xl">
               {' '}
               Ready-to-Eat, Ready-to-Cook, Frozen, Dry Foods, and Spices
-            </span>
+            </span>{' '}
             crafted to preserve their freshness and originality. <br />
             Our journey began with a simple mission: <br />
             <span className="text-secondary">
@@ -34,7 +33,9 @@ export default function AboutSection() {
             reflects our promise of excellence.
           </p>
         </div>
-        <img src="/image/porata.png" className="relative h-full max-h-[500px]" alt="" />
+        <picture className="relative h-full w-full">
+          <img src="/image/porata.png" className="relative h-full max-h-[500px]" alt="" />
+        </picture>
       </div>
     </section>
   );

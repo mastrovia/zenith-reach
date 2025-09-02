@@ -1,7 +1,9 @@
 export default function HeroSection() {
   return (
     <section className="relative md:h-full">
-      <img src="/banners/home-page-bg.png" alt="" />
+      <picture>
+        <img src="/banners/home-page-bg.png" alt="" />
+      </picture>
       <div className="absolute bottom-0 left-0 w-full h-96">
         <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl text-white mb-4 leading-20">
