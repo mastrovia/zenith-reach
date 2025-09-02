@@ -26,8 +26,8 @@ const ProductHero: React.FC<ProductHeroProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-4xl">
+      <div className="relative z-10 max-w-section pb-20 mx-auto w-full">
+        <div className="">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white mb-6 animate-fade-in-up">
             {title}
           </h1>

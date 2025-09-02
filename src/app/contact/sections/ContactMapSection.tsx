@@ -10,7 +10,7 @@ type ContactMapSectionProps = {
 const ContactMapSection: React.FC<ContactMapSectionProps> = ({ title = 'Locate Us', mapSrc }) => {
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-12">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-section mx-auto">
         <h3 className="sr-only">{title}</h3>
         <div className="rounded-2xl overflow-hidden ring-1 ring-white/10">
           <div className="relative w-full h-[540px]">

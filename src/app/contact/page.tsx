@@ -21,7 +21,6 @@ const Contact = () => {
     <div>
       <div className="min-h-screen bg-background">
         <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-
         <ProductHero
           backgroundImage={contactData.hero.backgroundImage}
           title={contactData.hero.title}
@@ -35,7 +34,6 @@ const Contact = () => {
             imageAlt={contactData.contactInfoSection.imageAlt}
             cards={contactData.contactInfoSection.cards}
           />
-
           <ContactFormSection />
           <ContactMapSection mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31517.0369933465!2d76.3062218!3d9.9816352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d1b6c9b3a99%3A0x4a0fdf3a27b2b4c5!2sKakkanad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" />
         </div>
