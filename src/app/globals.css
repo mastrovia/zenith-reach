@@ -37,6 +37,11 @@
   .font-manrope {
     font-family: 'Manrope', sans-serif;
   }
+
+  .font-sofia {
+    font-family: var(--fond-sofia-sans-extra-condensed);
+  }
+
   .max-w-section {
     @apply max-w-7xl px-10;
   }

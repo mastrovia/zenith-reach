@@ -39,13 +39,13 @@ export default function Home() {
 
         {/* Hashtag marquee */}
         <HashtagMarquee />
-
-        {/* Global presence */}
-        <GlobalPresence />
-
-        {/* Food showcase */}
-        <FoodShowcase />
       </div>
+
+      {/* Global presence */}
+      <GlobalPresence />
+
+      {/* Food showcase */}
+      <FoodShowcase />
 
       {/* Certifications strip */}
       <CertificationsStrip />
