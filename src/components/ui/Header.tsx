@@ -41,7 +41,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
                 OUR PRODUCTS
               </Link>
               <Link
-                href="#contact"
+                href="/contact"
                 className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
               >
                 CONTACT US
@@ -86,7 +86,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               OUR PRODUCTS
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
             >
               CONTACT US
