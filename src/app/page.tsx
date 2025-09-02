@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Footer from "@/components/ui/Footer";
-import Header from "@/components/ui/Header";
-import HeroSection from "@/components/ui/HeroSection";
-import { useState } from "react";
+import Footer from '@/components/ui/Footer';
+import Header from '@/components/ui/Header';
+import HeroSection from '@/components/ui/HeroSection';
+import { useState } from 'react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ export default function Home() {
 
       {/* Scroll to Top Button */}
       <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 w-12 h-12 bg-food-green rounded-full flex items-center justify-center hover:bg-food-light-green transition-colors shadow-lg z-50"
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,41 +1,41 @@
-import Image from "next/image";
-import React from "react";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
+import Image from 'next/image';
+import React from 'react';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6';
 
 const Footer = () => {
   const footerLinks1 = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about-us" },
-    { label: "Our Mission", href: "#our-mission" },
-    { label: "Product Categories", href: "#product-categories" },
-    { label: "Why Choose Us", href: "#why-choose-us" },
-    { label: "Quality & Standards", href: "#quality-standards" },
+    { label: 'Home', href: '#home' },
+    { label: 'About Us', href: '#about-us' },
+    { label: 'Our Mission', href: '#our-mission' },
+    { label: 'Product Categories', href: '#product-categories' },
+    { label: 'Why Choose Us', href: '#why-choose-us' },
+    { label: 'Quality & Standards', href: '#quality-standards' },
   ];
 
   const footerLinks2 = [
     {
-      label: "Spices",
-      href: "#spices",
+      label: 'Spices',
+      href: '#spices',
     },
     {
-      label: "Frozen Products",
-      href: "#frozen-products",
+      label: 'Frozen Products',
+      href: '#frozen-products',
     },
     {
-      label: "Dry Products",
-      href: "#dry-products",
+      label: 'Dry Products',
+      href: '#dry-products',
     },
     {
-      label: "Export Info",
-      href: "#export-info",
+      label: 'Export Info',
+      href: '#export-info',
     },
     {
-      label: "Privacy Policy",
-      href: "#privacy-policy",
+      label: 'Privacy Policy',
+      href: '#privacy-policy',
     },
     {
-      label: "Contact",
-      href: "#contact",
+      label: 'Contact',
+      href: '#contact',
     },
   ];
   return (
@@ -49,7 +49,10 @@ const Footer = () => {
                 <ul className="space-y-4">
                   {footerLinks1.map((link) => (
                     <li key={link.label}>
-                      <a href={link.href} className="text-3xl font-light text-white opacity-20 hover:opacity-100 transition-opacity">
+                      <a
+                        href={link.href}
+                        className="text-3xl font-light text-white opacity-20 hover:opacity-100 transition-opacity"
+                      >
                         {link.label}
                       </a>
                     </li>
@@ -65,7 +68,10 @@ const Footer = () => {
                 <ul className="space-y-4">
                   {footerLinks2.map((link) => (
                     <li key={link.label}>
-                      <a href={link.href} className="text-3xl font-light text-white opacity-20 hover:opacity-100 transition-opacity">
+                      <a
+                        href={link.href}
+                        className="text-3xl font-light text-white opacity-20 hover:opacity-100 transition-opacity"
+                      >
                         {link.label}
                       </a>
                     </li>
