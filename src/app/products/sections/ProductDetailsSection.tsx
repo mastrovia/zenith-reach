@@ -44,7 +44,7 @@ const ProductDetailsSection: React.FC<ProductDetailsSectionProps> = ({
             : mainImage;
 
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 gradient-secondary">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Side - Image Gallery */}
@@ -146,6 +146,7 @@ const ProductDetailsSection: React.FC<ProductDetailsSectionProps> = ({
                     </div>
                 </div>
             </div>
+
         </section>
     );
 };

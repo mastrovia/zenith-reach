@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Header from '@/components/ui/Header';
 import ProductHero from '@/components/ProductHero';
 import ProductDetailsSection from './sections/ProductDetailsSection';
+import WhyChooseSection from './sections/WhyChooseSection';
+import Footer from '@/components/ui/Footer';
 
 const Products = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,8 +60,24 @@ const Products = () => {
                 showScrollIndicator={true}
                 onScrollClick={handleScrollClick}
             />
-
+            <div className="flex-1 pt-20 gradient-secondary">
                 <ProductDetailsSection {...productData} />
+
+                <WhyChooseSection
+                    title="Why Choose Our Coconut Products?"
+                    benefits={[
+                        { id: 'b1', text: 'Farm-fresh coconuts from Kerala' },
+                        { id: 'b2', text: 'Hygienically processed & frozen to lock freshness' },
+                        { id: 'b3', text: 'Preserves authentic aroma, texture, and nutrition' },
+                        { id: 'b4', text: 'Suitable for global cuisines and food industries' },
+                    ]}
+                    image="/image/coconutbg.jpg"
+                    imageAlt="Fresh coconuts"
+                    rightTitle={'Bring the authentic taste of Kerala coconuts to your customers.'}
+                />
+            </div>
+
+            <Footer />
         </div>
     );
 };

@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { BsGrid, BsGridFill } from "react-icons/bs";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import { BsGrid, BsGridFill } from 'react-icons/bs';
 
 type Props = {
   isMenuOpen: boolean;
@@ -22,16 +22,28 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <Link href="/" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
+              <Link
+                href="/"
+                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
+              >
                 HOME
               </Link>
-              <Link href="#about" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
+              <Link
+                href="#about"
+                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
+              >
                 ABOUT US
               </Link>
-              <Link href="products" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
-                PRODUCTS
+              <Link
+                href="/products"
+                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
+              >
+                OUR PRODUCTS
               </Link>
-              <Link href="#contact" className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors">
+              <Link
+                href="#contact"
+                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
+              >
                 CONTACT US
               </Link>
             </div>
@@ -45,9 +57,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-foreground hover:text-food-green focus:outline-none focus:text-food-green"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {isMenuOpen ? <BsGridFill size={20} /> : <BsGrid size={20} />}
-              </svg>
+              {isMenuOpen ? <BsGridFill size={20} /> : <BsGrid size={20} />}
             </button>
           </div>
         </div>
@@ -57,18 +67,30 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass">
-            <a href="#home" className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium">
+            <Link
+              href="#home"
+              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+            >
               HOME
-            </a>
-            <a href="#about" className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium">
+            </Link>
+            <Link
+              href="#about"
+              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+            >
               ABOUT US
-            </a>
-            <a href="#products" className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium">
-              PRODUCTS
-            </a>
-            <a href="#contact" className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium">
+            </Link>
+            <Link
+              href="/products"
+              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+            >
+              OUR PRODUCTS
+            </Link>
+            <Link
+              href="#contact"
+              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+            >
               CONTACT US
-            </a>
+            </Link>
           </div>
         </div>
       )}
