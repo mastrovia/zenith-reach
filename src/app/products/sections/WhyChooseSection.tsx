@@ -25,12 +25,12 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({
     rightTitle,
 }) => {
     return (
-        <section className="pb-20 mb-24 pt-10 px-4 sm:px-6 lg:px-8">
+        <section className="pb-20 pt-10 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="grid gap-12 items-start">
                     {/* Left Side - Title + FAQs, then Image */}
-                    <div className="space-y-8">
-                        <div className="space-y-6">
+                    <div className="space-y-12">
+                        <div className="space-y-4">
                             <h3 className="text-2xl md:text-3xl font-medium text-white">{title}</h3>
                             <div className="space-y-3">
                                 {benefits.map((benefit) => (

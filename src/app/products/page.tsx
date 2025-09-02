@@ -60,7 +60,7 @@ const Products = () => {
                 showScrollIndicator={true}
                 onScrollClick={handleScrollClick}
             />
-            <div className="flex-1 pt-20 gradient-secondary">
+            <div className="flex flex-col gap-18 pb-20 mb-24 pt-10 px-4 gradient-secondary">
                 <ProductDetailsSection {...productData} />
 
                 <WhyChooseSection
