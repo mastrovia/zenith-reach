@@ -34,7 +34,10 @@ export default function CategoriesSection() {
   const Item = (c: ItemProps) => {
     return (
       <article key={c.title} className={c.className}>
-        <div className={`relative aspect-[${c.ratio ? c.ratio : '4/3'}] overflow-hidden rounded-4xl`}>
+        <div
+          className={`relative aspect-[${c.ratio ? c.ratio : '4/3'}] overflow-hidden rounded-4xl`}
+          style={{ aspectRatio: c.ratio ? c.ratio : '4/3' }}
+        >
           <Image
             src={c.image}
             alt={c.title}
