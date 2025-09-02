@@ -12,7 +12,7 @@ export default function GlobalPresence() {
 
       <div className="mx-auto max-w-section">
         <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-white/10">
-          <Image src="/images/world-map.jpg" alt="World map" fill className="object-cover" />
+          <Image src="/image/world-map.png" alt="World map" fill className="object-cover" />
           <div className="absolute inset-0 bg-black/20" />
         </div>
         <p className="mt-3 text-right text-xs text-white/70">Delivering Indian flavors to 30+ countries</p>
