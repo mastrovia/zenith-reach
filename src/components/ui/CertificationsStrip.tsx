@@ -1,28 +1,35 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import React from "react";
+import React from 'react';
 
 const LOGOS = [
-  { src: "/images/logo-fssai.png", alt: "FSSAI" },
-  { src: "/images/logo-apeda.png", alt: "APEDA" },
-  { src: "/images/logo-iso.png", alt: "ISO" },
-  { src: "/images/logo-haccp.png", alt: "HACCP" },
+  { src: '/image/qs-fssai.png', alt: 'FSSAI' },
+  { src: '/image/qs-apeda.png', alt: 'APEDA' },
+  { src: '/image/qs-iso.png', alt: 'ISO' },
+  { src: '/image/qs-haccp.png', alt: 'HACCP' },
 ];
 
 export default function CertificationsStrip() {
   return (
-    <section className="relative bg-black text-white py-10">
-      <div className="mx-auto max-w-section flex items-center justify-center gap-10 opacity-80">
-        {LOGOS.map((logo) => (
-          <div key={logo.alt} className="relative h-10 w-24 md:h-12 md:w-28 grayscale">
-            <Image src={logo.src} alt={logo.alt} fill className="object-contain" />
-          </div>
-        ))}
+    <section className="relative bg-black text-white py-16">
+      <div className="mx-auto max-w-section">
+        <h2 className="text-center text-secondary text-4xl mb-8">
+          Quality Standards <br />& Certifications
+        </h2>
+        <div className="grid grid-cols-4 items-center justify-center gap-8">
+          {LOGOS.map((logo) => (
+            <div key={logo.alt} className="relative grayscale border border-gray-800 md:h-52 p-16 rounded-xl">
+              <picture>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="object-scale-down object-center w-full h-full"
+                />
+              </picture>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-
-
