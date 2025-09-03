@@ -34,12 +34,36 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               >
                 ABOUT US
               </Link>
-              <Link
-                href="/products"
-                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
-              >
-                OUR PRODUCTS
-              </Link>
+              <div className="relative group">
+                <Link
+                  href="/products"
+                  className="text-foreground hover:text-food-green h-12 px-3 py-2 text-sm font-medium transition-colors"
+                >
+                  OUR PRODUCTS
+                </Link>
+                <div className="absolute left-0 mt-2 hidden group-hover:block">
+                  <div className="glass rounded-md shadow-lg ring-1 ring-white/10 w-56 overflow-hidden">
+                    <Link
+                      href="/categories"
+                      className="block px-4 py-3 text-sm text-foreground hover:bg-white/5"
+                    >
+                      Frozen Products
+                    </Link>
+                    <Link
+                      href="/categories"
+                      className="block px-4 py-3 text-sm text-foreground hover:bg-white/5"
+                    >
+                      Dry Products
+                    </Link>
+                    <Link
+                      href="/categories"
+                      className="block px-4 py-3 text-sm text-foreground hotver:bg-white/5"
+                    >
+                      Spices Products
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <Link
                 href="/contact"
                 className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
