@@ -26,7 +26,7 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({
 }) => {
   return (
     <section className="pb-20 pt-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-section mx-auto">
         <div className="grid gap-12 items-start">
           {/* Left Side - Title + FAQs, then Image */}
           <div className="space-y-12">

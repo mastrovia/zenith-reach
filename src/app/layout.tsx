@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Manrope } from 'next/font/google';
+import { Geist, Geist_Mono, Manrope, Sofia_Sans_Extra_Condensed } from 'next/font/google';
 import './globals.css';
 
 const geistSans = Geist({
@@ -17,6 +17,11 @@ const manrope = Manrope({
   subsets: ['latin'],
 });
 
+const sofiaSansExtraCondensed = Sofia_Sans_Extra_Condensed({
+  variable: '--fond-sofia-sans-extra-condensed',
+  subsets: ['latin'],
+});
+
 export const metadata: Metadata = {
   title: 'Zenith Reach - Reach New Heights',
   description: "Bringing India's Tradition to the World",
@@ -29,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} ${sofiaSansExtraCondensed.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

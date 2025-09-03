@@ -3,6 +3,14 @@
 import Footer from '@/components/ui/Footer';
 import Header from '@/components/ui/Header';
 import HeroSection from '@/components/ui/HeroSection';
+import StatsStrip from '@/components/ui/StatsStrip';
+import AboutSection from '@/components/ui/AboutSection';
+import CategoriesSection from '@/components/ui/CategoriesSection';
+import UniqueGrid from '@/components/ui/UniqueGrid';
+import GlobalPresence from '@/components/ui/GlobalPresence';
+import FoodShowcase from '@/components/ui/FoodShowcase';
+import CertificationsStrip from '@/components/ui/CertificationsStrip';
+import HashtagMarquee from '@/components/ui/HashtagMarquee';
 import { useState } from 'react';
 
 export default function Home() {
@@ -16,7 +24,31 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      <div className="h-screen"></div>
+      {/* Stats */}
+      <StatsStrip />
+
+      <div className="gradient-secondary">
+        {/* About */}
+        <AboutSection />
+
+        {/* Categories */}
+        <CategoriesSection />
+
+        {/* Unique features */}
+        <UniqueGrid />
+
+        {/* Hashtag marquee */}
+        <HashtagMarquee />
+      </div>
+
+      {/* Global presence */}
+      <GlobalPresence />
+
+      {/* Food showcase */}
+      <FoodShowcase />
+
+      {/* Certifications strip */}
+      <CertificationsStrip />
 
       <Footer />
 
