@@ -6,7 +6,7 @@ export const contactData = {
       "We'd love to connect with distributors, retailers, and partners worldwide. Reach out for trade inquiries, partnerships, or product details.",
   },
   contactInfoSection: {
-    image: '/image/contactbg.jpg',
+    image: '/image/cu-banner.png',
     imageAlt: 'Farmers working in a field',
     cards: [
       {

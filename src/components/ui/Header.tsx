@@ -1,3 +1,6 @@
+'use client';
+
+import useScrollPosition from '@/hooks/useScrollPosition';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -9,8 +12,10 @@ type Props = {
 };
 
 const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
+  const { isAtTop } = useScrollPosition();
+
   return (
-    <nav className="fixed top-0 w-full z-50 glass">
+    <nav className={`fixed top-0 w-full z-50 ${isAtTop ? '' : 'glass'} transition-all`}>
       <div className="max-w-section mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
