@@ -33,7 +33,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({
           </h1>
 
           <p
-            className="text-lg md:text-xl lg:text-2xl font-light text-white/90 mb-8 animate-fade-in-up"
+            className="text-lg md:text-xl lg:text-2xl font-light text-white/90 mb-8 animate-fade-in-up line-clamp-2 md:line-clamp-none"
             style={{ animationDelay: '0.2s' }}
           >
             {subtitle}
