@@ -58,7 +58,7 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="my-12">
+                <div className="my-12 hidden lg:block">
                   <p className="text-gray-100 opacity-20 mx-auto text-sm">
                     © Copyright {new Date().getFullYear()} By Zenith Reach. All Rights Reserved.
                   </p>
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-1 grid justify-center items-center bg-background relative">
-            <div className="lg:hidden absolute left-[-50%] bottom-0 top-0 w-[150vh] bg-background z-0"></div>
+            <div className="lg:hidden absolute left-[-50%] bottom-0 top-0 w-[180vh] bg-background z-0"></div>
             <div className="hidden lg:flex absolute left-[100%] bottom-0 top-0 w-[50vh] bg-background"></div>
             <div className="md:text-right flex flex-col gap-4 items-center my-12 z-1">
               <Image src="/image/logo.png" alt="Logo" width={150} height={40} />
@@ -115,6 +115,11 @@ const Footer = () => {
                 <div className="rounded-full size-12 bg-primary flex justify-center items-center text-black">
                   <FaYoutube size={18} />
                 </div>
+              </div>
+              <div className="my-12 text-center lg:hidden">
+                <p className="text-gray-100 opacity-20 mx-auto text-sm">
+                  © Copyright {new Date().getFullYear()} By Zenith Reach. All Rights Reserved.
+                </p>
               </div>
             </div>
           </div>
