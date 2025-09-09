@@ -103,7 +103,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               HOME
             </Link>
             <Link
-              href="#about"
+              href="/about"
               className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
             >
               ABOUT US
