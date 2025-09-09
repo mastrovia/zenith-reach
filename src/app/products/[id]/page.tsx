@@ -45,7 +45,7 @@ const ProductPage = () => {
         showScrollIndicator={true}
         onScrollClick={handleScrollClick}
       />
-      <div className="flex flex-col gap-18 pb-20 mb-24 pt-10 px-4 gradient-secondary">
+      <div className="flex flex-col gap-12 sm:gap-18 pb-20 md:mb-24 pt-10 px-4 gradient-secondary">
         <ProductDetailsSection {...pageData.productDetails} />
         <WhyChooseSection
           title={pageData.whyChooseUs.title}
