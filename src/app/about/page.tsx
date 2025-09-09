@@ -8,6 +8,7 @@ import MissionVision from './sections/MissionVision';
 import Preview from './sections/Preview';
 import WhyChooseUs from './sections/WhyChooseUs';
 import OurCommitment from './sections/OurCommitment';
+import Contact from './sections/Contact';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +34,8 @@ Beyond food, we also cater to the global fashion industry with premium clothing 
       <WhyChooseUs />
 
       <OurCommitment />
+
+      <Contact />
 
       <Footer />
 

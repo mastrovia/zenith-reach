@@ -7,7 +7,10 @@ export default function MissionVision() {
   ];
 
   return (
-    <div className="max-w-section mx-auto">
+    <div className="max-w-section mx-auto relative">
+      <div className="absolute left-5 h-full flex justify-center">
+        <h1 className="text-8xl text-primary/25 rotate-[-90deg]">Mission | Vision</h1>
+      </div>
       <div className="grid md:grid-cols-3 gap-10">
         <div className="md:col-span-2">
           <h1 className="text-secondary text-3xl md:text-4xl font-semibold leading-tight">Our Vision</h1>
