@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/utils/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -34,7 +35,7 @@ const FrozenProductsSection: React.FC<ProductCategorySectionProps> = ({
 
   return (
     <section className="px-4 sm:px-6 lg:px-8 pb-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-section mx-auto">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-semibold text-secondary">{heading}</h2>
           {subheading ? <p className="text-white/90 text-sm mt-2 max-w-3xl">{subheading}</p> : null}
@@ -73,7 +74,7 @@ const CategoryCard: React.FC<{
       href={item.href ?? '#'}
       className={`group relative rounded-xl overflow-hidden bg-muted/10 ring-1 ring-white/10 hover:ring-white/20 transition ${className}`}
     >
-      <div className={`relative ${large ? 'h-[640px]' : 'h-60'}`}>
+      <div className={cn('relative', large ? 'h-[640px]' : 'h-full')}>
         <Image
           src={item.image}
           alt={item.title}

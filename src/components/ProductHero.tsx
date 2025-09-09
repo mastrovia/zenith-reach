@@ -19,7 +19,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({
   onScrollClick,
 }) => {
   return (
-    <div className="relative min-h-[60vh] sm:min-h-[80vh] flex items-end justify-start overflow-hidden md:px-20">
+    <div className="relative min-h-[60vh] sm:min-h-[80vh] flex items-end justify-start overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image src={backgroundImage} alt="Product background" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/50" />
