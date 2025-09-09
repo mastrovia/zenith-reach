@@ -43,7 +43,7 @@
   }
 
   .max-w-section {
-    @apply max-w-7xl px-10;
+    @apply max-w-7xl px-5 md:px-10;
   }
 }
 

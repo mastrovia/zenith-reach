@@ -7,8 +7,8 @@ export default function MissionVision() {
   ];
 
   return (
-    <div className="max-w-section mx-auto relative">
-      <div className="absolute left-5 h-full flex justify-center">
+    <section className="max-w-section mx-auto relative overflow-hidden">
+      <div className="hidden md:flex absolute left-5 h-full justify-center">
         <h1 className="text-8xl text-primary/25 rotate-[-90deg]">Mission | Vision</h1>
       </div>
       <div className="grid md:grid-cols-3 gap-10">
@@ -29,12 +29,12 @@ export default function MissionVision() {
           </picture>
         </div>
       </div>
-      <div className="rounded-3xl bg-primary/30 p-10 text-center mt-14 max-w-4xl mx-auto flex flex-col gap-6">
+      <div className="rounded-3xl bg-primary/30 p-5 md:p-10 text-center mt-5 md:mt-14 max-w-4xl mx-auto flex flex-col gap-6">
         <h1 className="text-secondary text-3xl md:text-4xl font-semibold leading-tight uppercase">
           Our Mission
         </h1>
         <div className="h-[2px] w-full bg-primary/50" />
-        <div className="w-full rounded-2xl bg-primary p-10 text-start">
+        <div className="w-full rounded-2xl bg-primary p-5 md:p-10 text-start">
           {missions.map((mission, idx) => (
             <p key={idx} className="text-white leading-relaxed mb-4 flex items-center gap-3">
               <svg
@@ -55,6 +55,6 @@ export default function MissionVision() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

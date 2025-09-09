@@ -1,7 +1,7 @@
 export default function Preview() {
   return (
-    <section className="max-w-section mx-auto flex gap-5 p-5 mt-20">
-      <picture>
+    <section className="max-w-section mx-auto flex gap-5 p-5 mt-10">
+      <picture className="hidden md:block">
         <img src="/image/about-us-preview-01.png" alt="" />
       </picture>
       <div className="relative">
@@ -19,7 +19,7 @@ export default function Preview() {
           </svg>
         </div>
       </div>
-      <picture>
+      <picture className="hidden md:block">
         <img src="/image/about-us-preview-03.png" alt="" />
       </picture>
     </section>

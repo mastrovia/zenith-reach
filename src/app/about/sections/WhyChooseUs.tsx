@@ -134,11 +134,11 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="max-w-section mx-auto grid md:grid-cols-8 gap-8 py-20">
+    <section className="max-w-section mx-auto grid md:grid-cols-8 gap-8 py-10 md:py-20">
       <div className="text-3xl text-secondary font-bold shrink-0 md:hidden">
         <h2>Why Choose Zenith Reach?</h2>
       </div>
-      <div className="md:col-span-6 lg:col-span-5 xl:col-span-6 grid grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-5">
+      <div className="md:col-span-6 lg:col-span-5 xl:col-span-6 grid sm:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-5">
         {cards.map((card, index) => (
           <div
             key={index}
