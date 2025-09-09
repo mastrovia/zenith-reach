@@ -1,5 +1,5 @@
 export const productsData = {
-  'coconut': {
+  coconut: {
     hero: {
       backgroundImage: '/image/coconutbg.jpg',
       title: 'Coconut Products',
@@ -108,7 +108,7 @@ export const productsData = {
           name: 'Ivy Gourd',
           description: 'Fresh-cut pieces of tender ivy gourd.',
           uses: 'Ideal for stir-fries and thoran.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/vegetables/ivygourd.jpg',
         },
         {
@@ -164,7 +164,7 @@ export const productsData = {
           name: 'Red Spinach',
           description: 'Cleaned and chopped red spinach leaves.',
           uses: 'Ready for stir-fries and curries.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/vegetables/redspinach.jpg',
         },
         {
@@ -204,7 +204,7 @@ export const productsData = {
           name: 'Gooseberry',
           description: 'Cleaned and cut fresh gooseberries.',
           uses: 'Suitable for pickles, chutneys, and juices.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/vegetables/gooseberry.jpg',
         },
         {
@@ -266,7 +266,7 @@ export const productsData = {
           description:
             'Traditional steamed snack made with jackfruit, rice flour, and jaggery, wrapped in bay leaves.',
           uses: 'Perfect for tea-time or festive occasions.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/products/snacks/kumbilappam.jpg',
         },
         {
@@ -274,7 +274,7 @@ export const productsData = {
           name: 'Aloo Bonda',
           description: 'Golden-fried snack with spicy mashed potato filling.',
           uses: 'Ideal for tea-time or as a party snack.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/aloobonda.jpg',
         },
         {
@@ -282,7 +282,7 @@ export const productsData = {
           name: 'Elayada (Jaggery)',
           description: 'Steamed rice parcels filled with coconut and jaggery, wrapped in banana leaves.',
           uses: 'Perfect for festivals and sweet cravings.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/elayadajaggery.jpg',
         },
         {
@@ -290,7 +290,7 @@ export const productsData = {
           name: 'Veg Spring Roll',
           description: 'Crispy rolls filled with seasoned vegetables.',
           uses: 'Great for starters, parties, and kids’ snacks.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/vegspringroll.jpg',
         },
         {
@@ -298,7 +298,7 @@ export const productsData = {
           name: 'Elayada (Jackfruit)',
           description: 'Steamed rice flour wraps with jackfruit filling, a traditional Kerala delicacy.',
           uses: 'Ideal for festivals and celebrations.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/elayadajackfruit.jpg',
         },
         {
@@ -306,7 +306,7 @@ export const productsData = {
           name: 'Kozhukkatta',
           description: 'Steamed rice dumplings filled with sweet coconut and jaggery.',
           uses: 'A classic breakfast and evening snack.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/kozhukkatta.jpg',
         },
         {
@@ -314,7 +314,7 @@ export const productsData = {
           name: 'Aloo Tikki',
           description: 'Crispy potato patties with mild spices.',
           uses: 'Perfect for chaats, burgers, or evening snacks.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/alootikki.jpg',
         },
         {
@@ -322,7 +322,7 @@ export const productsData = {
             name: 'Banana Roast',
             description: 'Ripe banana fritters coated in batter and fried.',
             uses: 'A tea-time favorite in Kerala households.',
-            packSizes: ['200g', '500g'],
+            //   packSizes: ['200g', '500g'],
             image: '/image/snacks/bananaroast.jpg',
         },
         {
@@ -330,7 +330,7 @@ export const productsData = {
             name: 'Punjabi Samosa',
             description: 'Crispy pastry pockets filled with spiced potatoes and peas.',
             uses: 'Best served with chutney or tea.',
-            packSizes: ['200g', '500g'],
+            //   packSizes: ['200g', '500g'],
             image: '/image/snacks/punjabisamosa.jpg',
         },
         */
@@ -348,7 +348,7 @@ export const productsData = {
             name: 'Vegetable Nuggets',
             description: 'Crispy nuggets made with fresh vegetables.',
             uses: 'Great for kids and quick snacks.',
-            packSizes: ['200g', '500g'],
+            //   packSizes: ['200g', '500g'],
             image: '/image/snacks/vegnuggets.jpg',
         },
         */
@@ -366,7 +366,7 @@ export const productsData = {
             name: 'Vegetable Samosa',
           description: 'Golden-fried samosas with spiced vegetable filling.',
           uses: 'Perfect for snacks, parties, and festivals.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/vegsamosa.jpg',
         },
         {
@@ -374,7 +374,7 @@ export const productsData = {
           name: 'Unniyappam',
           description: 'Sweet rice fritters made with jaggery and banana.',
           uses: 'A traditional Kerala sweet snack.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/unniyappam.jpg',
         },
         {
@@ -382,7 +382,7 @@ export const productsData = {
           name: 'Banana Fry',
           description: 'Golden-fried raw banana slices.',
           uses: 'Ideal as a crispy side or evening snack.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/bananafry.jpg',
         },
         {
@@ -390,7 +390,7 @@ export const productsData = {
             name: 'Neyyappam',
             description: 'Traditional Kerala sweet snack made with rice, jaggery, and ghee.',
             uses: 'Perfect for festive occasions.',
-            packSizes: ['200g', '500g'],
+            //   packSizes: ['200g', '500g'],
             image: '/image/snacks/neyyappam.jpg',
         },
         {
@@ -398,7 +398,7 @@ export const productsData = {
           name: 'Unnakka',
           description: 'Sweet stuffed snack made with rice flour and coconut filling.',
           uses: 'A nostalgic Kerala evening snack.',
-          packSizes: ['200g', '500g'],
+          //   packSizes: ['200g', '500g'],
           image: '/image/snacks/unnakka.jpg',
         },
         */
@@ -426,7 +426,7 @@ export const productsData = {
       rightTitle: 'Bring the authentic taste of Kerala snacks to your customers.',
     },
   },
-  'porrota': {
+  porrota: {
     hero: {
       backgroundImage: '/banners/porotta-b.png',
       title: 'Porotta Variants',

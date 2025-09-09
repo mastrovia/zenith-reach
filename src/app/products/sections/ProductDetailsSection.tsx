@@ -3,32 +3,28 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-interface ProductVariant {
-  id: string;
-  name: string;
-  description: string;
-  uses: string;
-  packSizes: string[];
-  image: string;
-}
-
-interface ExportDetails {
-  form: string;
-  shelfLife: string;
-  packaging: string;
-  qualityStandards: string;
-}
-
-interface ProductDetailsSectionProps {
+interface ProductDetailsProps {
   title: string;
   description: string;
-  variants: ProductVariant[];
-  exportDetails: ExportDetails;
+  variants: Array<{
+    id: string;
+    name: string;
+    description: string;
+    uses?: string;
+    packSizes?: string[];
+    image: string;
+  }>;
+  exportDetails: {
+    form: string;
+    shelfLife: string;
+    packaging: string;
+    qualityStandards: string;
+  };
   mainImage: string;
   thumbnailImages: string[];
 }
 
-const ProductDetailsSection: React.FC<ProductDetailsSectionProps> = ({
+const ProductDetailsSection: React.FC<ProductDetailsProps> = ({
   title,
   description,
   variants,
