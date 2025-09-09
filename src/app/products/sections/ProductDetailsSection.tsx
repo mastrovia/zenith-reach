@@ -38,8 +38,8 @@ const ProductDetailsSection: React.FC<ProductDetailsProps> = ({
     selectedImageIndex < thumbnailImages.length ? thumbnailImages[selectedImageIndex] : mainImage;
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8">
-      <div className="max-w-section mx-auto">
+    <section className="px-2 sm:px-6 lg:px-8">
+      <div className="sm:max-w-section sm:mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Image Gallery */}
           <div className="space-y-6">

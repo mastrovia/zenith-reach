@@ -13,7 +13,7 @@ const ContactFormSection: React.FC<ContactFormSectionProps> = ({
 }) => {
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-12">
-      <div className="max-w-section mx-auto">
+      <div className="sm:max-w-section sm:mx-auto">
         <div className="mb-6">
           <h2 className="text-3xl md:text-4xl font-semibold text-secondary">{title}</h2>
           <p className="text-white/80 mt-3 max-w-3xl">{description}</p>
