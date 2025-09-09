@@ -9,26 +9,26 @@ export const categoryData = [
         image: '/products/coconut-p.png',
         description:
           'Freshly harvested coconuts, cleaned and processed under hygienic standards. From grated to sliced coconut, we deliver natural freshness and authentic taste, ready for your kitchen or food industry needs.',
-        href: '/products',
+        href: '/products/coconut',
         featured: true,
       },
       {
         id: 'vegetables',
         title: 'Vegetables',
         image: '/products/vegetables-p.png',
-        href: '#',
+        href: '/products/cut-vegetables',
       },
       {
         id: 'snacks',
         title: 'Snacks',
         image: '/products/snacks-p.png',
-        href: '#',
+        href: '/products/snacks',
       },
       {
         id: 'porotta',
         title: 'Porotta',
         image: '/products/porotta-p.png',
-        href: '#',
+        href: '/products/porotta',
       },
       {
         id: 'jackfruit',
