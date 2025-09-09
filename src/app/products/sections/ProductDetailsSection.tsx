@@ -3,32 +3,28 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-interface ProductVariant {
-  id: string;
-  name: string;
-  description: string;
-  uses: string;
-  packSizes: string[];
-  image: string;
-}
-
-interface ExportDetails {
-  form: string;
-  shelfLife: string;
-  packaging: string;
-  qualityStandards: string;
-}
-
-interface ProductDetailsSectionProps {
+interface ProductDetailsProps {
   title: string;
   description: string;
-  variants: ProductVariant[];
-  exportDetails: ExportDetails;
+  variants: Array<{
+    id: string;
+    name: string;
+    description: string;
+    uses?: string;
+    packSizes?: string[];
+    image: string;
+  }>;
+  exportDetails: {
+    form: string;
+    shelfLife: string;
+    packaging: string;
+    qualityStandards: string;
+  };
   mainImage: string;
   thumbnailImages: string[];
 }
 
-const ProductDetailsSection: React.FC<ProductDetailsSectionProps> = ({
+const ProductDetailsSection: React.FC<ProductDetailsProps> = ({
   title,
   description,
   variants,
@@ -92,19 +88,25 @@ const ProductDetailsSection: React.FC<ProductDetailsSectionProps> = ({
                     {index + 1}. {variant.name}
                   </h4>
                   <ul className="space-y-1 text-white/80">
-                    <li className="flex items-start">
-                      <span className="size-1 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      {variant.description}
-                    </li>
-                    <li className="flex items-start">
-                      <span className="size-1 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      {variant.uses}
-                    </li>
-                    <li className="flex items-start">
-                      <span className="size-1 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="font-medium">Pack Sizes: </span>
-                      <span>{variant.packSizes.join(', ')}</span>
-                    </li>
+                    {variant.description && (
+                      <li className="flex items-start">
+                        <span className="size-1 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        {variant.description}
+                      </li>
+                    )}
+                    {variant.uses && (
+                      <li className="flex items-start">
+                        <span className="size-1 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        {variant.uses}
+                      </li>
+                    )}
+                    {variant.packSizes && (
+                      <li className="flex items-start">
+                        <span className="size-1 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="font-medium">Pack Sizes: </span>
+                        <span>{variant.packSizes.join(', ')}</span>
+                      </li>
+                    )}
                   </ul>
                 </div>
               ))}

@@ -2,81 +2,78 @@
 
 import React, { useState } from 'react';
 import Header from '@/components/ui/Header';
-import ProductHero from '@/components/ProductHero';
-import ProductDetailsSection from './sections/ProductDetailsSection';
-import WhyChooseSection from './sections/WhyChooseSection';
 import Footer from '@/components/ui/Footer';
+import Link from 'next/link';
+import Image from 'next/image';
+import { productsData } from '@/utils/products/ProductsData';
 
-const Products = () => {
+const ProductsPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleScrollClick = () => {
-    const productDescription = document.getElementById('product-description');
-    if (productDescription) {
-      productDescription.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const productData = {
-    title: 'Product Description',
-    description:
-      'Coconut Products from Zenith Reach are prepared from hand-picked, farm-fresh coconuts sourced from Kerala - the land of coconuts. With modern processing methods, we ensure natural taste, aroma, and nutrition stay intact. Ideal for curries, desserts, bakery items, and traditional Indian cooking, bringing authentic flavor to kitchens worldwide.',
-    variants: [
-      {
-        id: 'grated-coconut',
-        name: 'Grated Coconut',
-        description: 'Freshly grated and frozen to lock in natural flavor.',
-        uses: 'Ideal for chutneys, curries, sweets, and baking.',
-        packSizes: ['200g', '500g', '1kg'],
-        image: '/image/coconutbg.jpg',
-      },
-      {
-        id: 'sliced-coconut',
-        name: 'Sliced Coconut',
-        description: 'Thinly sliced coconut pieces, frozen to preserve texture and taste.',
-        uses: 'Perfect for snacks, frying, and traditional recipes.',
-        packSizes: ['200g', '500g', '1kg'],
-        image: '/image/coconutbg.jpg',
-      },
-    ],
-    exportDetails: {
-      form: 'Frozen',
-      shelfLife: '12 months (under frozen conditions)',
-      packaging: 'Hygienic, vacuum-sealed / LDPE food-grade pouches',
-      qualityStandards: 'Processed as per international food safety & export norms',
-    },
-    mainImage: '/image/coconutbg.jpg',
-    thumbnailImages: ['/image/coconutbg.jpg', '/image/coconutbg.jpg'],
-  };
+  // Convert productsData to array format for the products grid
+  const products = Object.entries(productsData).map(([id, data]) => ({
+    id,
+    name: data.hero.title,
+    description: data.hero.subtitle,
+    image: data.hero.backgroundImage,
+    variants: data.productDetails.variants.map((variant) => variant.name),
+  }));
 
   return (
     <div className="min-h-screen bg-background">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <ProductHero
-        backgroundImage="/image/coconutbg.jpg"
-        title="Coconut Products"
-        subtitle="Freshly processed, hygienically packed, and ready for international markets."
-        showScrollIndicator={true}
-        onScrollClick={handleScrollClick}
-      />
-      <div className="flex flex-col gap-18 pb-20 mb-24 pt-10 px-4 gradient-secondary">
-        <ProductDetailsSection {...productData} />
-        <WhyChooseSection
-          title="Why Choose Our Coconut Products?"
-          benefits={[
-            { id: 'b1', text: 'Farm-fresh coconuts from Kerala' },
-            { id: 'b2', text: 'Hygienically processed & frozen to lock freshness' },
-            { id: 'b3', text: 'Preserves authentic aroma, texture, and nutrition' },
-            { id: 'b4', text: 'Suitable for global cuisines and food industries' },
-          ]}
-          image="/image/coconutbg.jpg"
-          imageAlt="Fresh coconuts"
-          rightTitle={'Bring the authentic taste of Kerala coconuts to your customers.'}
-        />
-      </div>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Products</h1>
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
+            Discover our range of premium products, carefully crafted to meet international standards
+          </p>
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product) => (
+              <Link
+                key={product.id}
+                href={`/products/${product.id}`}
+                className="group bg-muted/30 rounded-lg overflow-hidden hover:bg-muted/50 transition-colors"
+              >
+                <div className="aspect-[4/3] relative">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>
+                  <p className="text-white/80 mb-4">{product.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {product.variants.map((variant, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm"
+                      >
+                        {variant}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
 };
 
-export default Products;
+export default ProductsPage;
