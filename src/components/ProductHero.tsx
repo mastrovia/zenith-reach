@@ -15,7 +15,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({
   title,
   subtitle,
   description,
-  showScrollIndicator = true,
+  showScrollIndicator,
   onScrollClick,
 }) => {
   return (

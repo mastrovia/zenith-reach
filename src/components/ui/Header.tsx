@@ -34,7 +34,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
                 HOME
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
               >
                 ABOUT US
