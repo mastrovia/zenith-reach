@@ -9,7 +9,9 @@ export default function Contact() {
           <h2 className="text-4xl md:text-6xl font-medium text-white mb-6 leading-13 sm:leading-normal md:leading-20">
             Want to <br /> partner with <br /> Zenith Reach?
           </h2>
-          <button className="bg-primary px-5 py-2">Contact now</button>
+          <a href="/contact" className="cursor-pointer">
+            <button className="cursor-pointer bg-primary px-5 py-2">Contact now</button>
+          </a>
         </div>
       </div>
     </section>
