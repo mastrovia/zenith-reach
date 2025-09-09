@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { BsArrowRight } from 'react-icons/bs';
+import Link from 'next/link';
 
 interface Benefit {
   id: string;
@@ -25,8 +26,8 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({
   rightTitle,
 }) => {
   return (
-    <section className="px-2 sm:px-6 lg:px-8">
-      <div className="sm:max-w-section sm:mx-auto">
+    <section>
+      <div className="max-w-section mx-auto">
         <div className="grid gap-12 items-start">
           {/* Left Side - Title + FAQs, then Image */}
           <div className="space-y-12">
@@ -68,10 +69,10 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({
 
               <div className="flex flex-col gap-6 items-start justify-between h-full">
                 <h2 className="text-5xl md:text-7xl text-primary/80">{rightTitle}</h2>
-                <p className="text-lg text-white leading-relaxed flex justify-start items-center gap-2">
+                <Link href='/contact' className="text-lg text-white leading-relaxed flex justify-start items-center gap-2 cursor-pointer hover:scale">
                   Contact Us for Trade Inquiries
                   <BsArrowRight />
-                </p>
+                </Link>
               </div>
             </div>
           </div>

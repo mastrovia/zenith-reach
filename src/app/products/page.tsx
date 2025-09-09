@@ -42,7 +42,7 @@ const Categories = () => {
           'At Zenith Reach, we ensure that every product is sourced with care, processed with the highest standards, and delivered with freshness intact. Whether you are a distributor, retailer, or food service business, our diverse product range is tailored to meet global demands.'
         }
         ctaText="Contact Now"
-        ctaHref="#contact"
+        ctaHref="/contact"
       />
 
       <Footer />

@@ -21,8 +21,8 @@ const ContactInfoSection: React.FC<ContactInfoSectionProps> = ({
   cards,
 }) => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 sm:py-16">
-      <div className="sm:max-w-section md:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <section className="sm:py-16">
+      <div className="max-w-section md:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left: Three cards */}
         <div className="space-y-4">
           {cards.map((card) => (
