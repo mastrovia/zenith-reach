@@ -1,15 +1,23 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const Footer = () => {
+  const pathname = usePathname();
+
   const footerLinks1 = [
-    { label: 'Home', href: '#home' },
-    { label: 'About Us', href: '#about-us' },
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
     { label: 'Our Mission', href: '#our-mission' },
-    { label: 'Product Categories', href: '#product-categories' },
-    { label: 'Why Choose Us', href: '#why-choose-us' },
-    { label: 'Quality & Standards', href: '#quality-standards' },
+    { label: 'Product Categories', href: '/products' },
+    { label: 'Why Choose Us', href: '#why-choose' },
+    {
+      label: 'Contact',
+      href: '/contact',
+    },
   ];
 
   const footerLinks2 = [
@@ -33,10 +41,7 @@ const Footer = () => {
       label: 'Privacy Policy',
       href: '#privacy-policy',
     },
-    {
-      label: 'Contact',
-      href: '#contact',
-    },
+    { label: 'Quality & Standards', href: '/about' },
   ];
   return (
     <>
@@ -49,12 +54,15 @@ const Footer = () => {
                 <ul className="space-y-4">
                   {footerLinks1.map((link) => (
                     <li key={link.label}>
-                      <a
+                      <Link
                         href={link.href}
-                        className="text-3xl font-light text-white opacity-20 hover:opacity-100 transition-opacity"
+                        className={`flex gap-1 text-3xl font-light text-white  hover:opacity-100 transition-opacity ${
+                          pathname === link.href ? 'opacity-100' : 'opacity-20'
+                        }`}
                       >
+                        {pathname === link.href && <MdKeyboardArrowRight />}
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

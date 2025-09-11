@@ -426,7 +426,7 @@ export const productsData = {
       rightTitle: 'Bring the authentic taste of Kerala snacks to your customers.',
     },
   },
-  porrota: {
+  porotta: {
     hero: {
       backgroundImage: '/banners/porotta-b.png',
       title: 'Porotta Variants',
@@ -441,10 +441,11 @@ export const productsData = {
           id: 'malabar-porotta',
           name: 'Malabar Porotta',
           description: 'Flaky and layered flatbread, a signature Kerala delight.',
-          uses: 'Perfect with curries, gravies, or as a standalone snack.',
-          packSizes: ['400g', '800g', '1kg'],
+          //   uses: 'Perfect with curries, gravies, or as a standalone snack.',
+          //   packSizes: ['400g', '800g', '1kg'],
           image: '/image/porotta/malabar.jpg',
         },
+        /*
         {
           id: 'methi-paratha',
           name: 'Methi Paratha',
@@ -462,6 +463,15 @@ export const productsData = {
           image: '/image/porotta/coin.jpg',
         },
         {
+            id: 'paneer-paratha',
+            name: 'Paneer Paratha',
+            description: 'Whole wheat paratha stuffed with seasoned cottage cheese.',
+            uses: 'Great for breakfast, lunch boxes, or a quick snack.',
+            packSizes: ['400g', '800g', '1kg'],
+            image: '/image/porotta/paneer.jpg',
+            },
+            */
+        {
           id: 'kerala-porotta',
           name: 'Kerala Porotta',
           description: 'Authentic hand-tossed porotta with fluffy layers.',
@@ -470,21 +480,15 @@ export const productsData = {
           image: '/image/porotta/kerala.jpg',
         },
         {
-          id: 'paneer-paratha',
-          name: 'Paneer Paratha',
-          description: 'Whole wheat paratha stuffed with seasoned cottage cheese.',
-          uses: 'Great for breakfast, lunch boxes, or a quick snack.',
-          packSizes: ['400g', '800g', '1kg'],
-          image: '/image/porotta/paneer.jpg',
-        },
-        {
           id: 'kothu-parotta',
           name: 'Kothu Parotta',
           description: 'Chopped porotta stir-fried with spices and curry.',
-          uses: 'A popular street-food style dish, ready-to-heat and serve.',
-          packSizes: ['400g', '800g', '1kg'],
+          //   uses: 'A popular street-food style dish, ready-to-heat and serve.',
+          //   packSizes: ['400g', '800g', '1kg'],
           image: '/image/porotta/kothu.jpg',
         },
+        /*
+
         {
           id: 'ceylon-parotta',
           name: 'Ceylon Parotta',
@@ -509,6 +513,7 @@ export const productsData = {
           packSizes: ['400g', '800g', '1kg'],
           image: '/image/porotta/aloo.jpg',
         },
+        */
       ],
       exportDetails: {
         form: 'Ready-to-cook, Frozen',
@@ -531,6 +536,230 @@ export const productsData = {
       image: '/products/porotta/porotta-p3.jpg',
       imageAlt: 'Variety of porottas and parathas',
       rightTitle: 'From Kerala kitchens to global tables – the magic of Indian bread.',
+    },
+  },
+  'side-dish': {
+    hero: {
+      backgroundImage: '/banners/side-dish-b.jpeg',
+      title: 'Heat & Eat Side Dishes',
+      subtitle: 'Homely accompaniments! Traditional Kerala recipes made easy.',
+    },
+    productDetails: {
+      title: 'Product Description',
+      description:
+        'Zenith Reach brings you authentic Kerala-style side dishes, made with farm-fresh ingredients and traditional recipes. Cooked hygienically and frozen to lock in natural flavors, these Heat & Eat dishes are the perfect blend of convenience and taste. Just heat and serve – enjoy the warmth of homely cooking anytime, anywhere.',
+      variants: [
+        {
+          id: 'chena-mezhukkupuratty',
+          name: 'Chena Mezhukkupuratty',
+          description: 'Stir-fried yam with coconut oil and spices.',
+          //   uses: 'Perfect side dish with steamed rice.',
+          //   packSizes: ['200g', '500g'],
+          image: '/image/sidedish/chena.jpg',
+        },
+        {
+          id: 'cheera-thoran',
+          name: 'Cheera Thoran',
+          description: 'Red spinach stir-fried with grated coconut.',
+          //   uses: 'Nutritious accompaniment for rice meals.',
+          //   packSizes: ['200g', '500g'],
+          image: '/image/sidedish/cheera.jpg',
+        },
+        /*
+        {
+            id: 'koorka-mezhukkupuratty',
+            name: 'Koorka Mezhukkupuratty',
+            description: 'Chinese potatoes sautéed with spices and coconut oil.',
+            uses: 'Traditional Kerala favorite with rice.',
+            packSizes: ['200g', '500g'],
+            image: '/image/sidedish/koorka.jpg',
+        },
+        */
+        {
+          id: 'aviyal',
+          name: 'Aviyal',
+          description: 'A classic Kerala mix of vegetables, coconut, and yogurt.',
+          //   uses: 'Essential dish in Kerala Sadya (feast).',
+          //   packSizes: ['200g', '500g'],
+          image: '/image/sidedish/aviyal.jpg',
+        },
+        /*
+        {
+            id: 'kovakka-peera',
+            name: 'Kovakka Peera',
+            description: 'Ivy gourd cooked with grated coconut and spices.',
+            uses: 'Best served with rice and curry.',
+            packSizes: ['200g', '500g'],
+            image: '/image/sidedish/kovakka.jpg',
+        },
+        {
+            id: 'muringayila-thoran',
+            name: 'Muringayila Thoran',
+          description: 'Drumstick leaves stir-fried with coconut.',
+          uses: 'Rich in nutrition, pairs perfectly with rice.',
+          packSizes: ['200g', '500g'],
+          image: '/image/sidedish/muringayila.jpg',
+        },
+        {
+            id: 'vendakka-mezhukkupuratti',
+            name: 'Vendakka Mezhukkupuratti',
+            description: 'Okra stir-fried with coconut oil and spices.',
+            uses: 'Simple and tasty daily side dish.',
+            packSizes: ['200g', '500g'],
+          image: '/image/sidedish/vendakka.jpg',
+        },
+        {
+            id: 'vazhapindi-vanpayar-thoran',
+            name: 'Vazhapindi Vanpayar Thoran',
+            description: 'Banana stem cooked with red beans and coconut.',
+            uses: 'Wholesome and fiber-rich recipe.',
+            packSizes: ['200g', '500g'],
+            image: '/image/sidedish/vazhapindi.jpg',
+        },
+        {
+            id: 'vazhachundu-cherupayar-thoran',
+            name: 'Vazhachundu Cherupayar Thoran',
+            description: 'Banana flower stir-fried with green gram and coconut.',
+            uses: 'A unique and nutritious Kerala delicacy.',
+            packSizes: ['200g', '500g'],
+            image: '/image/sidedish/vazhachundu.jpg',
+        },
+        {
+            id: 'kappa-puzhukku',
+            name: 'Mashed Tapioca (Kappa Puzhukku)',
+            description: 'Steamed tapioca mashed and seasoned with coconut.',
+            uses: 'Best paired with Kerala fish curry or chutney.',
+          packSizes: ['200g', '500g'],
+          image: '/image/sidedish/kappa.jpg',
+        },
+        */
+      ],
+      exportDetails: {
+        form: 'Ready-to-eat, Frozen',
+        shelfLife: '12 months (under frozen conditions)',
+        packaging: 'Hygienic, vacuum-sealed / LDPE food-grade pouches',
+        qualityStandards: 'Processed as per international food safety & export norms',
+      },
+      mainImage: '/image/sidedishbg.jpg',
+      thumbnailImages: ['/products/side-dish/side-p4.webp', '/products/side-dish/side-p2.webp'],
+    },
+    whyChooseUs: {
+      title: 'Why Choose Our Heat & Eat Side Dishes?',
+      benefits: [
+        { id: 'h1', text: 'Authentic Kerala homestyle recipes' },
+        { id: 'h2', text: 'Farm-fresh ingredients, hygienically prepared' },
+        { id: 'h3', text: 'Frozen to preserve authentic taste and aroma' },
+        { id: 'h4', text: 'Quick and convenient – heat and serve in minutes' },
+        { id: 'h5', text: 'Perfect for homes, restaurants, and global markets' },
+      ],
+      image: '/products/side-dish/side-p1.jpg',
+      imageAlt: 'Kerala Heat & Eat side dishes',
+      rightTitle: 'Serve homely side dishes anywhere in the world.',
+    },
+  },
+  'fruit-pulp': {
+    hero: {
+      backgroundImage: '/banners/pulp-b.jpeg',
+      title: 'Freshly Frozen Fruit Blends Pulp',
+      subtitle: 'Colours of nature! Fresh taste, vibrant flavor, and year-round availability.',
+    },
+    productDetails: {
+      title: 'Product Description',
+      description:
+        'Zenith Reach offers a wide range of freshly frozen fruit pulps, made from hand-picked fruits sourced from trusted farms. Using advanced freezing technology, we lock in natural taste, color, and nutrition to deliver consistent quality for households, restaurants, and food industries worldwide. Perfect for juices, smoothies, desserts, and culinary creations.',
+      variants: [
+        /*
+        {
+            id: 'tender-coconut-pulp',
+          name: 'Tender Coconut Pulp',
+          description: 'Delicately frozen tender coconut pulp with refreshing taste.',
+          uses: 'Ideal for beverages, desserts, and smoothies.',
+        //   packSizes: ['200g', '500g', '1kg'],
+          image: '/products/tender-coconut.jpg',
+        },
+            */
+        {
+          id: 'alphonso-mango-pulp',
+          name: 'Alphonso Mango Pulp',
+          description: 'Premium Alphonso mango pulp, rich in aroma and sweetness.',
+          uses: 'Perfect for juices, milkshakes, ice creams, and bakery items.',
+          //   packSizes: ['200g', '500g', '1kg'],
+          image: '/products/mango.jpg',
+        },
+        /*
+        {
+            id: 'chikku-fruit-pulp',
+            name: 'Chikku Fruit Pulp',
+          description: 'Sapodilla (Chikku) pulp with natural caramel-like sweetness.',
+          uses: 'Used in smoothies, desserts, and milkshakes.',
+          packSizes: ['200g', '500g', '1kg'],
+          image: '/products/chikku.jpg',
+        },
+        */
+        {
+          id: 'passion-fruit-pulp',
+          name: 'Passion Fruit Pulp',
+          description: 'Exotic passion fruit pulp with a tangy tropical flavor.',
+          uses: 'Great for cocktails, juices, sauces, and desserts.',
+        //   packSizes: ['200g', '500g', '1kg'],
+          image: '/products/passionfruit.jpg',
+        },
+        {
+          id: 'strawberry-fruit-pulp',
+          name: 'Strawberry Fruit Pulp',
+          description: 'Bright red strawberry pulp, sweet and slightly tangy.',
+          uses: 'Perfect for smoothies, desserts, jams, and bakery fillings.',
+        //   packSizes: ['200g', '500g', '1kg'],
+          image: '/products/strawberry.jpg',
+        },
+        /*
+        {
+            id: 'jackfruit-pulp',
+            name: 'Jackfruit Pulp',
+            description: 'Golden jackfruit pulp with natural sweetness and aroma.',
+            uses: 'Ideal for traditional sweets, desserts, and ice creams.',
+          packSizes: ['200g', '500g', '1kg'],
+          image: '/products/jackfruit.jpg',
+        },
+        {
+            id: 'grape-pulp',
+          name: 'Grape Pulp',
+          description: 'Naturally sweet and tangy grape pulp.',
+          uses: 'Used in juices, jams, jellies, and smoothies.',
+          packSizes: ['200g', '500g', '1kg'],
+          image: '/products/grape.jpg',
+        },
+        {
+            id: 'papaya-pulp',
+            name: 'Papaya Pulp',
+            description: 'Fresh papaya pulp with a mild sweetness and rich texture.',
+            uses: 'Perfect for health drinks, baby food, and desserts.',
+            packSizes: ['200g', '500g', '1kg'],
+            image: '/products/papaya.jpg',
+        },
+        */
+      ],
+      exportDetails: {
+        form: 'Frozen Fruit Pulp',
+        shelfLife: '12 months (under frozen conditions)',
+        packaging: 'Hygienic, vacuum-sealed / LDPE food-grade pouches',
+        qualityStandards: 'Processed as per international food safety & export norms',
+      },
+      mainImage: '/banners/fruitblends.jpg',
+      thumbnailImages: ['/products/pulp/pulp-p4.jpg', '/products/pulp/pulp-p2.jpg'],
+    },
+    whyChooseUs: {
+      title: 'Why Choose Our Frozen Fruit Pulps?',
+      benefits: [
+        { id: 'f1', text: 'Made from farm-fresh, hand-picked fruits' },
+        { id: 'f2', text: 'Frozen to lock in natural taste and nutrition' },
+        { id: 'f3', text: 'Bright natural colors and authentic fruit aroma' },
+        { id: 'f4', text: 'Convenient and available year-round' },
+        { id: 'f5', text: 'Suitable for homes, restaurants, and global industries' },
+      ],
+      image: '/products/pulp/pulp-p1.jpg',
+      imageAlt: 'Freshly frozen fruit pulp varieties',
+      rightTitle: 'Bring the colors of nature and freshness of fruits to your customers.',
     },
   },
 };

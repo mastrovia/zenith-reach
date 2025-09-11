@@ -3,6 +3,7 @@
 import useScrollPosition from '@/hooks/useScrollPosition';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import { BsGrid, BsGridFill } from 'react-icons/bs';
 
@@ -12,6 +13,7 @@ type Props = {
 };
 
 const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
+  const pathname = usePathname();
   const { isAtTop } = useScrollPosition();
 
   return (
@@ -29,20 +31,26 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 href="/"
-                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
+                className={`text-foreground hover:text-food-green px-3 py-2 text-sm  transition-colors ${
+                  pathname === '/' ? 'text-secondary font-semibold' : 'font-medium'
+                }`}
               >
                 HOME
               </Link>
               <Link
                 href="/about"
-                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
+                className={`text-foreground hover:text-food-green px-3 py-2 text-sm  transition-colors ${
+                  pathname === '/about' ? 'text-secondary font-semibold' : 'font-medium'
+                }`}
               >
                 ABOUT US
               </Link>
               <div className="relative group">
                 <Link
                   href="/products"
-                  className="text-foreground hover:text-food-green h-12 px-3 py-2 text-sm font-medium transition-colors"
+                  className={`text-foreground hover:text-food-green px-3 py-2 text-sm  transition-colors ${
+                    pathname === '/products' ? 'text-secondary font-semibold' : 'font-medium'
+                  }`}
                 >
                   OUR PRODUCTS
                 </Link>
@@ -71,7 +79,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               </div>
               <Link
                 href="/contact"
-                className="text-foreground hover:text-food-green px-3 py-2 text-sm font-medium transition-colors"
+                className={`text-foreground hover:text-food-green px-3 py-2 text-sm transition-colors ${
+                  pathname === '/contact' ? 'text-secondary font-semibold' : 'font-medium'
+                }`}
               >
                 CONTACT US
               </Link>
@@ -97,26 +107,34 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass">
             <Link
-              href="#home"
-              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+              href="/"
+              className={`text-foreground hover:text-food-green block px-3 py-2 text-base font-medium ${
+                pathname === '/' ? 'text-secondary font-semibold' : 'font-medium'
+              }`}
             >
               HOME
             </Link>
             <Link
               href="/about"
-              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+              className={`text-foreground hover:text-food-green block px-3 py-2 text-base font-medium ${
+                pathname === '/about' ? 'text-secondary font-semibold' : 'font-medium'
+              }`}
             >
               ABOUT US
             </Link>
             <Link
               href="/products"
-              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+              className={`text-foreground hover:text-food-green block px-3 py-2 text-base font-medium ${
+                pathname === '/products' ? 'text-secondary font-semibold' : 'font-medium'
+              }`}
             >
               OUR PRODUCTS
             </Link>
             <Link
               href="/contact"
-              className="text-foreground hover:text-food-green block px-3 py-2 text-base font-medium"
+              className={`text-foreground hover:text-food-green block px-3 py-2 text-base font-medium ${
+                pathname === '/contact' ? 'text-secondary font-semibold' : 'font-medium'
+              }`}
             >
               CONTACT US
             </Link>
