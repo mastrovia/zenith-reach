@@ -36,8 +36,8 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen m-auto bg-black">
-      <picture className="absolute z-0 h-full">
-        <img src="/banners/home-page-bg.png" alt="" className="h-full object-cover" />
+      <picture className="absolute inset-0 z-0">
+        <img src="/banners/home-page-bg.png" alt="" className="w-full h-full object-cover" />
       </picture>
       <div className="grid grid-cols-1 lg:grid-cols-3 min-h-screen justify-between relative max-w-section m-auto py-24 lg:py-40 px-4">
         {/* Left Column - Text Content */}
