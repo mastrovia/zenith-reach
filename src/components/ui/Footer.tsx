@@ -48,7 +48,7 @@ const Footer = () => {
       {/* Footer */}
       <footer className="bg-primary relative overflow-hidden">
         <div className="max-w-section mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 lg:justify-center w-full">
-          <div className="md:col-span-2 bg-primary py-12">
+          <div className="md:col-span-2 bg-primary py-12 px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between items-start w-full mt-12">
               <div className="w-full">
                 <ul className="space-y-4">
@@ -56,7 +56,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className={`flex gap-1 text-3xl font-light text-white  hover:opacity-100 transition-opacity ${
+                        className={`flex gap-1 text-xl md:text-3xl font-light text-white  hover:opacity-100 transition-opacity ${
                           pathname === link.href ? 'opacity-100' : 'opacity-20'
                         }`}
                       >
@@ -78,7 +78,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-3xl font-light text-white opacity-20 hover:opacity-100 transition-opacity"
+                        className="text-xl md:text-3xl font-light text-white opacity-20 hover:opacity-100 transition-opacity"
                       >
                         {link.label}
                       </a>
@@ -89,10 +89,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-1 grid justify-center items-center bg-background relative">
+          <div className="lg:col-span-1 grid justify-center items-center bg-background relative px-4">
             <div className="lg:hidden absolute left-[-50%] bottom-0 top-0 w-[180vh] bg-background z-0"></div>
             <div className="hidden lg:flex absolute left-[100%] bottom-0 top-0 w-[50vh] bg-background"></div>
-            <div className="md:text-right flex flex-col gap-4 items-center my-12 z-1">
+            <div className="md:text-right flex flex-col gap-4 items-center my-12 z-1 relative">
               <Image src="/image/logo.png" alt="Logo" width={150} height={40} />
               <div className="text-center">
                 <p className="text-xl font-light text-white mb-2">Zenith Reach Exports</p>

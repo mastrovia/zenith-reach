@@ -18,14 +18,14 @@ const STATS: Stat[] = [
 export default function StatsStrip() {
   return (
     <section className="relative text-secondary/50 py-12 md:py-16">
-      <div className="mx-auto max-w-section flex gap-16 justify-center">
+      <div className="mx-auto max-w-section flex flex-wrap gap-8 lg:gap-16 justify-center px-4">
         {STATS.map((stat) => (
           <div key={stat.label} className="text-center relative flex items-end">
-            <div className="text-6xl md:text-7xl lg:text-9xl font-bold text-food-light-green">
+            <div className="text-4xl md:text-7xl lg:text-9xl font-bold text-food-light-green">
               {stat.value}
             </div>
-            <div className="text-2xl font-bold">{stat.symbol}</div>
-            <div className="font-semibold text-white/80 absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+            <div className="text-xl md:text-2xl font-bold">{stat.symbol}</div>
+            <div className="font-semibold text-white/80 absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center text-sm md:text-base">
               {stat.label}
             </div>
           </div>

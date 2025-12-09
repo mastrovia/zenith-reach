@@ -4,10 +4,10 @@ import React from 'react';
 
 export default function AboutSection() {
   return (
-    <section className="relative py-16 md:py-24">
-      <div className="mx-auto max-w-section flex flex-col lg:flex-row gap-28 items-center w-full">
+    <section className="relative py-16 md:py-24 px-4">
+      <div className="mx-auto max-w-section flex flex-col lg:flex-row gap-10 lg:gap-28 items-center w-full">
         <div className="relative">
-          <div className="absolute top-0 left-[-230px] bottom-0 flex items-center z-0">
+          <div className="hidden lg:flex absolute top-0 left-[-230px] bottom-0 items-center z-0">
             <h2 className="rotate-[-90deg] text-primary/50 text-8xl">ABOUT US</h2>
           </div>
           <h3 className="text-secondary text-3xl md:text-4xl font-semibold leading-tight relative">
@@ -34,7 +34,11 @@ export default function AboutSection() {
           </p>
         </div>
         <picture className="relative h-full w-full">
-          <img src="/image/porata.png" className="relative h-full max-h-[500px]" alt="" />
+          <img
+            src="/image/porata.png"
+            className="relative h-full max-h-[300px] md:max-h-[500px] mx-auto"
+            alt=""
+          />
         </picture>
       </div>
     </section>

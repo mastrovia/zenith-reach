@@ -76,12 +76,12 @@ export default function UniqueGrid() {
   };
 
   return (
-    <section className="relative py-16 md:py-24">
+    <section className="relative py-16 md:py-24 px-4">
       <div className="mx-auto max-w-section flex flex-col gap-8">
-        <h3 className="text-center text-5xl text-secondary">What makes us UNIQUE</h3>
-        <div className="grid grid-cols-3 gap-8">
-          <div className="col-span-2 grid gap-8">
-            <div className="grid grid-cols-2 gap-8">
+        <h3 className="text-center text-3xl md:text-5xl text-secondary">What makes us UNIQUE</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="col-span-1 lg:col-span-2 grid gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-primary/50 rounded-xl">
                 <Item
                   icon={svgs.a}

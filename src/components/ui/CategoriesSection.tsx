@@ -104,8 +104,8 @@ export default function CategoriesSection() {
 
   return (
     <div className="w-full overflow-hidden">
-      <section className="relative py-16 md:py-24 mx-auto max-w-section">
-        <div className="grid grid-cols-3 gap-8">
+      <section className="relative py-16 md:py-24 mx-auto max-w-section px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-1 h-full flex flex-col justify-end">
             <Item
               {...{
@@ -117,9 +117,9 @@ export default function CategoriesSection() {
               listItems={FROZEN_LIST}
             />
           </div>
-          <div className="col-span-2 flex flex-col gap-8">
-            <div className="text-8xl text-primary text-end">CATEGORIES</div>
-            <div className="flex gap-8">
+          <div className="col-span-1 md:col-span-2 flex flex-col gap-8">
+            <div className="text-5xl md:text-8xl text-primary text-start md:text-end">CATEGORIES</div>
+            <div className="flex flex-col md:flex-row gap-8">
               {CATEGORIES.map((c) => (
                 <Item key={c.image} {...c} className="col-span-1 w-full" />
               ))}
@@ -128,7 +128,7 @@ export default function CategoriesSection() {
         </div>
 
         <picture>
-          <img src="/image/leaf-vector.png" className="absolute left-full bottom-0" alt="" />
+          <img src="/image/leaf-vector.png" className="absolute left-full bottom-0 hidden md:block" alt="" />
         </picture>
       </section>
     </div>
