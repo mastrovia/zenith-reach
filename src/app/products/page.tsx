@@ -2,10 +2,10 @@
 import ProductHero from '@/components/ProductHero';
 import Header from '@/components/ui/Header';
 import React, { useState } from 'react';
-import FrozenProductsSection from './sections/ProductCategorySection';
 import BrandStatementSection from './sections/BrandStatementSection';
 import Footer from '@/components/ui/Footer';
 import { categoryData } from '@/utils/CategoryData';
+import ProductCategorySection from './sections/ProductCategorySection';
 
 const Categories = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +27,7 @@ const Categories = () => {
         onScrollClick={handleScrollClick}
       />
       {categoryData.map((item, idx) => (
-        <FrozenProductsSection
+        <ProductCategorySection
           key={idx}
           heading={item.heading}
           subheading={item.subheading}

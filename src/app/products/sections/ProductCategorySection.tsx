@@ -98,7 +98,7 @@ const CategoryCard: React.FC<{
         clickable ? 'cursor-pointer' : 'cursor-default'
       } ${
         isViewAll
-          ? 'glass hover:bg-white/5 flex items-center justify-center h-full w-full'
+          ? 'glass border border-white/20 hover:bg-white/5 flex items-center justify-center h-full w-full '
           : 'bg-muted/10 ring-1 ring-white/10 hover:ring-white/20'
       } ${className}`}
     >
