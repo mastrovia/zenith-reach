@@ -45,38 +45,14 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               >
                 ABOUT US
               </Link>
-              <div className="relative group">
-                <Link
-                  href="/products"
-                  className={`text-foreground hover:text-food-green px-3 py-2 text-sm  transition-colors ${
-                    pathname === '/products' ? 'text-secondary font-semibold' : 'font-medium'
-                  }`}
-                >
-                  OUR PRODUCTS
-                </Link>
-                <div className="absolute left-0 mt-2 hidden group-hover:block">
-                  <div className="glass rounded-md shadow-lg ring-1 ring-white/10 w-56 overflow-hidden">
-                    <Link
-                      href="/categories"
-                      className="block px-4 py-3 text-sm text-foreground hover:bg-white/5"
-                    >
-                      Frozen Products
-                    </Link>
-                    <Link
-                      href="/categories"
-                      className="block px-4 py-3 text-sm text-foreground hover:bg-white/5"
-                    >
-                      Dry Products
-                    </Link>
-                    <Link
-                      href="/categories"
-                      className="block px-4 py-3 text-sm text-foreground hotver:bg-white/5"
-                    >
-                      Spices Products
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <Link
+                href="/products"
+                className={`text-foreground hover:text-food-green px-3 py-2 text-sm  transition-colors ${
+                  pathname === '/products' ? 'text-secondary font-semibold' : 'font-medium'
+                }`}
+              >
+                OUR PRODUCTS
+              </Link>
               <Link
                 href="/contact"
                 className={`text-foreground hover:text-food-green px-3 py-2 text-sm transition-colors ${
@@ -87,8 +63,6 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: Props) => {
               </Link>
             </div>
           </div>
-
-          <BsGrid className="hidden md:block" size={20} />
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
