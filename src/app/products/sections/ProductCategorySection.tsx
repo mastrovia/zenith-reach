@@ -98,13 +98,13 @@ const CategoryCard: React.FC<{
         clickable ? 'cursor-pointer' : 'cursor-default'
       } ${
         isViewAll
-          ? 'border border-white/30 hover:border-white bg-transparent flex items-center justify-center'
+          ? 'glass hover:bg-white/5 flex items-center justify-center h-full w-full'
           : 'bg-muted/10 ring-1 ring-white/10 hover:ring-white/20'
       } ${className}`}
     >
       {isViewAll ? (
         <div className="flex flex-col items-center justify-center gap-4 text-white group-hover:scale-105 transition-transform">
-          <div className="size-12 rounded-full bg-secondary flex items-center justify-center text-white">
+          <div className="size-12 rounded-full border border-white/20 flex items-center justify-center text-white">
             <RiArrowRightLine size={24} />
           </div>
           <span className="font-medium text-lg">{viewAllText}</span>

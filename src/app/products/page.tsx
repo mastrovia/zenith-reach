@@ -33,7 +33,7 @@ const Categories = () => {
           subheading={item.subheading}
           items={item.items}
           ctaText="View All"
-          ctaHref="#"
+          ctaHref={item.ctaHref}
         />
       ))}
       <BrandStatementSection
