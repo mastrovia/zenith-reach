@@ -8,7 +8,7 @@ import Footer from '@/components/ui/Footer';
 import ProductCard, { ProductCardProps } from '@/components/ProductCard';
 import ProductModal from '@/components/ProductModal';
 import { getCategoryBySlug } from '@/utils/productUtils';
-import { RiArrowRightLine, RiHome2Line } from 'react-icons/ri';
+import { RiArrowRightLine } from 'react-icons/ri';
 
 export default function CategoryListingPage() {
   const params = useParams();
