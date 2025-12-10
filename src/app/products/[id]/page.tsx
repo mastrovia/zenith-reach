@@ -9,7 +9,7 @@ import Footer from '@/components/ui/Footer';
 import ProductCard, { ProductCardProps } from '@/components/ProductCard';
 import ProductModal from '@/components/ProductModal';
 import { getProductById, getCategoryByProductId, getRelatedProducts } from '@/utils/productUtils';
-import { RiArrowRightLine, RiWhatsappLine, RiMailLine } from 'react-icons/ri';
+import { RiArrowRightLine, RiMailLine } from 'react-icons/ri';
 
 export default function ProductDetailsPage() {
   const params = useParams();

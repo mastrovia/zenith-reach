@@ -88,60 +88,64 @@ const CategoryCard: React.FC<{
   viewAllText = 'View All',
   viewAllHref = '#',
 }) => {
-  const Wrapper = (clickable ? Link : 'div') as any;
   const href = isViewAll ? viewAllHref : item.href ?? '#';
 
-  return (
-    <Wrapper
-      href={clickable ? href : undefined}
-      className={`group relative rounded-xl overflow-hidden transition ${
-        clickable ? 'cursor-pointer' : 'cursor-default'
-      } ${
-        isViewAll
-          ? 'glass border border-white/20 hover:bg-white/5 flex items-center justify-center h-full w-full '
-          : 'bg-muted/10 ring-1 ring-white/10 hover:ring-white/20'
-      } ${className}`}
-    >
-      {isViewAll ? (
-        <div className="flex flex-col items-center justify-center gap-4 text-white group-hover:scale-105 transition-transform">
-          <div className="size-12 rounded-full border border-white/20 flex items-center justify-center text-white">
-            <RiArrowRightLine size={24} />
-          </div>
-          <span className="font-medium text-lg">{viewAllText}</span>
-        </div>
-      ) : (
-        <>
-          <div className={cn('relative', large ? 'h-[640px]' : 'h-full')}>
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover h-full"
-            />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
-          </div>
+  const cardClasses = `group relative rounded-xl overflow-hidden transition ${
+    clickable ? 'cursor-pointer' : 'cursor-default'
+  } ${
+    isViewAll
+      ? 'glass border border-white/20 hover:bg-white/5 flex items-center justify-center h-full w-full '
+      : 'bg-muted/10 ring-1 ring-white/10 hover:ring-white/20'
+  } ${className}`;
 
-          {/* Text overlay */}
-          <div className="absolute inset-x-0 bottom-0 p-4">
-            <div className={`rounded-lg p-4 ${large ? 'backdrop-blur-md bg-black/40' : ''}`}>
-              <p className="text-white font-medium text-lg">{item.title}</p>
-              {item.description ? (
-                <div className="flex gap-2">
-                  <p className="text-white/70 text-xs mt-1 line-clamp-3 w-11/12">{item.description}</p>
-                  {clickable && (
-                    <div className="size-8 bg-secondary rounded-full flex items-center justify-center">
-                      <RiArrowRightLine />
-                    </div>
-                  )}
+  const cardContent = isViewAll ? (
+    <div className="flex flex-col items-center justify-center gap-4 text-white group-hover:scale-105 transition-transform">
+      <div className="size-12 rounded-full border border-white/20 flex items-center justify-center text-white">
+        <RiArrowRightLine size={24} />
+      </div>
+      <span className="font-medium text-lg">{viewAllText}</span>
+    </div>
+  ) : (
+    <>
+      <div className={cn('relative', large ? 'h-[640px]' : 'h-full')}>
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover h-full"
+        />
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+      </div>
+
+      {/* Text overlay */}
+      <div className="absolute inset-x-0 bottom-0 p-4">
+        <div className={`rounded-lg p-4 ${large ? 'backdrop-blur-md bg-black/40' : ''}`}>
+          <p className="text-white font-medium text-lg">{item.title}</p>
+          {item.description ? (
+            <div className="flex gap-2">
+              <p className="text-white/70 text-xs mt-1 line-clamp-3 w-11/12">{item.description}</p>
+              {clickable && (
+                <div className="size-8 bg-secondary rounded-full flex items-center justify-center">
+                  <RiArrowRightLine />
                 </div>
-              ) : null}
+              )}
             </div>
-          </div>
-        </>
-      )}
-    </Wrapper>
+          ) : null}
+        </div>
+      </div>
+    </>
   );
+
+  if (clickable) {
+    return (
+      <Link href={href} className={cardClasses}>
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return <div className={cardClasses}>{cardContent}</div>;
 };
 
 export default ProductCategorySection;

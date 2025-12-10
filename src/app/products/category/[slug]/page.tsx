@@ -56,8 +56,6 @@ export default function CategoryListingPage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 px-4">
         <div className="max-w-section mx-auto">
-          {/* Breadcrumb */}
-
           {/* Category Header */}
           <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4">{categoryName}</h1>
