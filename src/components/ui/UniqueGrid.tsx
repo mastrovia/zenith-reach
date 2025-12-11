@@ -79,37 +79,33 @@ export default function UniqueGrid() {
     <section className="relative py-16 md:py-24 px-4">
       <div className="mx-auto max-w-section flex flex-col gap-8">
         <h3 className="text-center text-3xl md:text-5xl text-secondary">What makes us UNIQUE</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="col-span-1 lg:col-span-2 grid gap-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-primary/50 rounded-xl">
-                <Item
-                  icon={svgs.a}
-                  title="Quality Ingredients"
-                  description="Handpicked, fresh, and pure ingredients for uncompromised taste."
-                />
-              </div>
-              <div className="bg-primary/50 rounded-xl">
-                <Item
-                  icon={svgs.b}
-                  title="International Standards"
-                  description="Global certifications, trusted quality."
-                />
-              </div>
-            </div>
-            <div className="bg-primary/50 rounded-xl">
-              <Item
-                icon={svgs.c}
-                title="Authentic Taste"
-                description="Traditional recipes, modern convenience."
-                paragraphs={[
-                  "Our ready-to-eat and ready-to-cook products preserve the authentic flavors of Indian cuisine while adapting to today's busy lifestyles.",
-                  'Every dish is rooted in tradition but designed for easy, quick preparation.',
-                ]}
-              />
-            </div>
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-4 md:pb-0">
+          <div className="min-w-[85vw] snap-center md:min-w-0 md:col-span-1 bg-primary/50 rounded-xl">
+            <Item
+              icon={svgs.a}
+              title="Quality Ingredients"
+              description="Handpicked, fresh, and pure ingredients for uncompromised taste."
+            />
           </div>
-          <div className="col-span-1 bg-primary/50 rounded-xl">
+          <div className="min-w-[85vw] snap-center md:min-w-0 md:col-span-1 bg-primary/50 rounded-xl">
+            <Item
+              icon={svgs.b}
+              title="International Standards"
+              description="Global certifications, trusted quality."
+            />
+          </div>
+          <div className="min-w-[85vw] snap-center md:min-w-0 md:col-span-2 bg-primary/50 rounded-xl">
+            <Item
+              icon={svgs.c}
+              title="Authentic Taste"
+              description="Traditional recipes, modern convenience."
+              paragraphs={[
+                "Our ready-to-eat and ready-to-cook products preserve the authentic flavors of Indian cuisine while adapting to today's busy lifestyles.",
+                'Every dish is rooted in tradition but designed for easy, quick preparation.',
+              ]}
+            />
+          </div>
+          <div className="min-w-[85vw] snap-center md:min-w-0 md:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-3 lg:row-start-1 bg-primary/50 rounded-xl">
             <Item
               icon={svgs.d}
               title="Wide Export Network"

@@ -1,6 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import { cn } from '@/utils/utils';
 
 export default function WhyChooseUs() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const cards = [
     {
       icon: (
@@ -143,8 +148,9 @@ export default function WhyChooseUs() {
           <div
             key={index}
             className={cn(
-              'flex flex-col items-center gap-5 border border-primary p-3 pt-10 rounded-2xl',
-              'hover:bg-primary hover:shadow-lg hover:shadow-[#87B023] transition-all'
+              'flex-col items-center gap-5 border border-primary p-3 pt-10 rounded-2xl',
+              'hover:bg-primary hover:shadow-lg hover:shadow-[#87B023] transition-all',
+              index > 0 && !isExpanded ? 'hidden md:flex' : 'flex'
             )}
           >
             <div className="shrink-0">{card.icon}</div>
@@ -155,6 +161,16 @@ export default function WhyChooseUs() {
           </div>
         ))}
       </div>
+      {!isExpanded && (
+        <div className="md:hidden col-span-full flex justify-center mt-4">
+          <button
+            onClick={() => setIsExpanded(true)}
+            className="text-primary font-bold text-lg inline-flex items-center gap-2"
+          >
+            View More <span>→</span>
+          </button>
+        </div>
+      )}
       <div className="hidden md:flex md:col-span-2 lg:col-span-3 xl:col-span-2 md:font-semibold lg:font-normal text-3xl lg:text-6xl xl:text-7xl md:border-l md:border-l-primary/40 md:px-10 md:leading-14 lg:leading-23 text-primary shrink-0">
         <h2>Why Choose Zenith Reach?</h2>
       </div>
