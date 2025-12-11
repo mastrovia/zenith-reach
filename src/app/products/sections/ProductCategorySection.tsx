@@ -44,12 +44,22 @@ const ProductCategorySection: React.FC<ProductCategorySectionProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featured ? (
-            <CategoryCard
-              item={featured}
-              className="md:row-span-2 lg:row-span-2 lg:col-span-1"
-              large
-              clickable={false}
-            />
+            <>
+              <CategoryCard
+                item={featured}
+                className="md:row-span-2 lg:row-span-2 lg:col-span-1"
+                large
+                clickable={false}
+              />
+              <div className="md:hidden col-span-1 flex justify-end px-2">
+                <Link
+                  href={ctaHref}
+                  className="text-primary font-bold text-lg inline-flex items-center gap-2"
+                >
+                  {ctaText} <RiArrowRightLine />
+                </Link>
+              </div>
+            </>
           ) : null}
 
           {displayItems.map((item, index) => {
@@ -62,6 +72,7 @@ const ProductCategorySection: React.FC<ProductCategorySectionProps> = ({
                 isViewAll={isLast}
                 viewAllText={ctaText}
                 viewAllHref={ctaHref}
+                className={index >= 2 ? 'hidden md:flex' : 'flex'}
               />
             );
           })}
@@ -107,7 +118,7 @@ const CategoryCard: React.FC<{
     </div>
   ) : (
     <>
-      <div className={cn('relative', large ? 'h-[640px]' : 'h-full')}>
+      <div className={cn('relative', large ? 'h-[450px] md:h-[640px]' : 'h-full')}>
         <Image
           src={item.image}
           alt={item.title}

@@ -1,8 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { cn } from '@/utils/utils';
 
 export default function AboutSection() {
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <section className="relative py-16 md:py-24 px-4">
       <div className="mx-auto max-w-section flex flex-col lg:flex-row gap-10 lg:gap-28 items-center w-full">
@@ -14,7 +16,7 @@ export default function AboutSection() {
             Bringing India&apos;s <br />
             Tradition to the World
           </h3>
-          <p className="mt-6 leading-8 relative text-lg">
+          <div className="mt-6 leading-8 relative text-lg">
             At <span className="font-bold text-xl">Zenith Reach</span>, we believe food is more than just
             nourishment — it&apos;s a connection to tradition, culture, and authentic taste. With a vision to
             bring the rich flavors of India to the world, we specialize in
@@ -24,14 +26,24 @@ export default function AboutSection() {
             </span>{' '}
             crafted to preserve their freshness and originality. <br />
             Our journey began with a simple mission: <br />
-            <span className="text-secondary">
-              To deliver trusted, preservative-free food products that combine convenience with authentic
-              taste.
+            {!isExpanded && (
+              <button
+                onClick={() => setIsExpanded(true)}
+                className="text-primary font-bold text-lg inline-flex items-center gap-2 md:hidden"
+              >
+                View More <span>→</span>
+              </button>
+            )}
+            <span className={cn(isExpanded ? 'inline' : 'hidden md:inline')}>
+              <span className="text-secondary">
+                To deliver trusted, preservative-free food products that combine convenience with authentic
+                taste.
+              </span>
+              <br /> What makes us unique is our commitment to quality, purity, and trust. From sourcing the
+              finest ingredients to maintaining international standards in packaging and export, every product
+              reflects our promise of excellence.
             </span>
-            <br /> What makes us unique is our commitment to quality, purity, and trust. From sourcing the
-            finest ingredients to maintaining international standards in packaging and export, every product
-            reflects our promise of excellence.
-          </p>
+          </div>
         </div>
         <picture className="relative h-full w-full">
           <img
