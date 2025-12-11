@@ -43,15 +43,15 @@ export default function HeroSection() {
         {/* Left Column - Text Content */}
         <div className="flex flex-col justify-end lg:col-span-2 mb-12 lg:mb-0">
           <div className="max-w-lg">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
               Pure Taste. Traditional Roots
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">
+            <p className="text-white/80 text-lg leading-relaxed md:mb-8">
               Bringing non-preservative ready-to-eat and ready-to-cook Indian food to the world.
             </p>
 
             {/* Carousel Indicators */}
-            <div className="flex gap-4">
+            <div className="hidden lg:flex gap-4">
               {carouselItems.map((_, index) => (
                 <button
                   key={index}
@@ -109,6 +109,19 @@ export default function HeroSection() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Mobile Carousel Indicators */}
+        <div className="flex lg:hidden gap-4 justify-center w-full mt-8">
+          {carouselItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
