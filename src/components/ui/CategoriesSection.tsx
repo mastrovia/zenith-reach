@@ -72,12 +72,15 @@ const CategoryCard = ({
 
         {/* Bottom Card Content (Always Visible, hides on hover) */}
         <div className="absolute bottom-0 right-0 w-[85%] bg-[#005C4B] rounded-tl-[3rem] p-6 md:p-8 transition-transform duration-500 group-hover:translate-y-full">
-          <div className="flex flex-col gap-2 mb-4">
+          <div className="flex flex-col gap-2 mb-4 pr-20">
             <h3 className="text-2xl font-medium text-white">{item.title}</h3>
             <p className="text-white/80 text-sm leading-relaxed line-clamp-2">{item.description}</p>
           </div>
 
-          <Link href={item.ctaHref} className="absolute bottom-6 right-6 w-10 h-10 bg-[#8CC63F] rounded-full flex items-center justify-center">
+          <Link
+            href={item.ctaHref}
+            className="absolute bottom-6 right-6 w-10 h-10 bg-[#8CC63F] rounded-full flex items-center justify-center z-10"
+          >
             <svg
               width="16"
               height="12"
