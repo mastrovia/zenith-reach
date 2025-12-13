@@ -69,7 +69,10 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({
 
               <div className="flex flex-col gap-6 items-start justify-between h-full">
                 <h2 className="text-5xl md:text-7xl text-primary/80">{rightTitle}</h2>
-                <Link href='/contact' className="text-lg text-white leading-relaxed flex justify-start items-center gap-2 cursor-pointer hover:scale">
+                <Link
+                  href="/contact"
+                  className="text-lg text-white leading-relaxed flex justify-start items-center gap-2 cursor-pointer hover:scale"
+                >
                   Contact Us for Trade Inquiries
                   <BsArrowRight />
                 </Link>
