@@ -39,7 +39,7 @@ export default function HeroSection() {
       <picture className="absolute inset-0 z-0">
         <img src="/banners/home-page-bg.png" alt="" className="w-full h-full object-cover" />
       </picture>
-      <div className="grid grid-cols-1 lg:grid-cols-3 min-h-screen justify-between relative max-w-section m-auto py-24 lg:py-40 px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 min-h-screen justify-between relative max-w-section m-auto py-24 lg:py-30 px-4">
         {/* Left Column - Text Content */}
         <div className="flex flex-col justify-end lg:col-span-2 mb-12 lg:mb-0">
           <div className="max-w-lg">
