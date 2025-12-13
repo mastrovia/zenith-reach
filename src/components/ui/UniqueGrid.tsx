@@ -66,11 +66,11 @@ export default function UniqueGrid() {
             </div>
           )}
         </div>
-        <div className="mt-auto">
+        {/* <div className="mt-auto">
           <button className="text-primary hover:text-white inline-flex items-center gap-2 text-sm">
             {cta} <span>→</span>
           </button>
-        </div>
+        </div> */}
       </div>
     );
   };

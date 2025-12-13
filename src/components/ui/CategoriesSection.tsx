@@ -77,7 +77,7 @@ const CategoryCard = ({
             <p className="text-white/80 text-sm leading-relaxed line-clamp-2">{item.description}</p>
           </div>
 
-          <div className="absolute bottom-6 right-6 w-10 h-10 bg-[#8CC63F] rounded-full flex items-center justify-center">
+          <Link href={item.ctaHref} className="absolute bottom-6 right-6 w-10 h-10 bg-[#8CC63F] rounded-full flex items-center justify-center">
             <svg
               width="16"
               height="12"
@@ -91,7 +91,7 @@ const CategoryCard = ({
                 fill="currentColor"
               />
             </svg>
-          </div>
+          </Link>
         </div>
       </div>
     </article>
