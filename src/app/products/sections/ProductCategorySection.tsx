@@ -64,6 +64,9 @@ const ProductCategorySection: React.FC<ProductCategorySectionProps> = ({
 
           {displayItems.map((item, index) => {
             const isLast = index === displayItems.length - 1;
+            const visibilityClass =
+              index >= 2 ? (isLast ? 'hidden md:flex' : 'hidden md:block') : isLast ? 'flex' : 'block';
+
             return (
               <CategoryCard
                 key={item.id}
@@ -72,7 +75,7 @@ const ProductCategorySection: React.FC<ProductCategorySectionProps> = ({
                 isViewAll={isLast}
                 viewAllText={ctaText}
                 viewAllHref={ctaHref}
-                className={index >= 2 ? 'hidden md:flex' : 'flex'}
+                className={visibilityClass}
               />
             );
           })}
