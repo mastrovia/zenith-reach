@@ -14,7 +14,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screetn bg-background">
       {/* Navigation */}
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <ProductHero
@@ -26,7 +26,7 @@ Beyond food, we also cater to the global fashion industry with premium clothing 
         // onScrollClick={handleScrollClick}
       />
 
-      <div className="gradient-secondary mt-10">
+      <div className="gradient-secondary mt-24">
         <MissionVision />
         <Preview />
       </div>

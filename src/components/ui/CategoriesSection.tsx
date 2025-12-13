@@ -139,7 +139,7 @@ export default function CategoriesSection() {
     {
       title: 'Dry Products',
       description: 'Dehydrated fruits, flours, and mixes.',
-      image: '/image/cat-dry.png',
+      image: '/image/cat-dry.jpg',
       listItems: dryItems,
       ctaHref: '/products/category/dry-products',
     },
